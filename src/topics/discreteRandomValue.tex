@@ -1,0 +1,93 @@
+
+\textbf{DISKRĒTS GADĪJUMLIELUMS}
+
+\equationEntry{Sagaidāmā vērtība:}
+{\begin{align*}
+    E[X] &= \mu = \sum_{i=1}^{N}x_iP(X=x_i) \\
+\end{align*}}
+
+\equationEntry{Dispersija:}
+{\begin{align*}
+    \sigma^2 &= \sum_{i=1}^{N}[x_i-E[X]]^2P(X=x_i) = E[x^2] - (E[X])^2 \\
+\end{align*}}
+
+\equationEntry{Standartnovirze:}
+{\begin{align*}
+    \sigma &= \sqrt{\sum_{i=1}^{N}[x_i-E[X]]^2P(X=x_i)} = \sqrt{E[x^2] - (E[X])^2} \\
+\end{align*}}
+
+\equationEntry{Kovariācija:}
+{\begin{align*}
+     &= \sum_{i=1}^{N}[x_i-E[X]][y_i-E[Y]]P(X=x_i, Y=y_i)
+\end{align*}}
+
+\equationEntry{Divu diskrēto gadījumlielumu summa}
+{\begin{align*}
+    E(X+Y) = E(X) + E(Y)
+\end{align*}}
+
+\equationEntry{Divu diskrēto gadījumlielumu dispersija}
+{\begin{align*}
+    Var(X+Y) = \sigma_{x+y}^2 = \sigma{x} + \sigma{y} + 2\sigma_{xy}\\
+\end{align*}}
+
+\equationEntry{Divu diskrēto gadījumlielumu standartnovirze}
+{\begin{align*}
+    \sigma_{x+y} = \sqrt{\sigma_{x+y}} 
+\end{align*}}
+
+
+\equationEntry{Portfeļa ienesīgums (vidējais svērtais ienesīgums)}
+{\begin{align*}
+    E(P)=wE(X)+(1-w)E(Y)\\
+\end{align*}}
+
+\equationEntry{Portfeļa ienesīgums (portfeļa risks)}
+{\begin{align*}
+    TODO
+\end{align*}}
+
+\equationEntry{Binomiālais sadalījums}
+{\begin{align*}
+    P(X=x | n,p)=\displaystyle\frac{n!}{x!(n-x)!}(1-\p)^{1-x}p^x
+\end{align*}
+
+Kur $p$ - notikuma varbūtība, $X$ - diskrēts gadījumlielums, $n$ - notikumu
+(izmēģinājumu) skaits.}
+
+
+\equationEntry{Binomiālais sadalījuma raksturlielumi}
+{\begin{align*}
+    \mu = E(X) &= np \\
+    \sigma^2 &= np(1-p) \\
+    \sigma &= \sqrt{np(1-p)}
+\end{align*}}
+
+
+\equationEntry{Puasona sadalījums (binom. aproksimācija)}
+{\begin{align*}
+    P(X=x|\lambda) &= \displaystyle\frac{e^{-\lambda}\lambda^x}{x!} \\
+    P(X=x|\lambda) &= POISSON.DIST(X, \mu, CUMM.) 
+\end{align*}
+
+Kur $x$ = notikuma iestāšanās skaits, $\lambda$ = sagaidāmais notikumu skaits
+(Puasona sadalījuma vidējā vērtība), $\lambda$ = np, $e$ = naturālā logaritma
+bāze ($2.71828...$ vai $EXP(1)$)
+}
+\equationEntry{Puasona sadalījuma raksturlielumi}
+{\begin{align*}
+    \mu &= \lambda \\
+    \sigma^2 &= \lambda \\
+    \sigma &= \sqrt{\lambda}
+\end{align*}
+}
+
+\equationEntry{Ģeometriskais sadalījums (Hiperģeometriskais)}
+{\begin{align*}
+    TODO 
+\end{align*}}
+
+\equationEntry{Ģeometriskais sadalījuma raksturlielumi}
+{\begin{align*}
+    TODO 
+\end{align*}}
