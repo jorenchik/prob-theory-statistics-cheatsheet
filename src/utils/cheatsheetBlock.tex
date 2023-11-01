@@ -22,15 +22,15 @@ node [midway, fill=white] {#2};}
 % \end{tikzpicture}
 % \bigskip\\
 
-\newcommand{\cheatsheetBlock}[2]
+
+\newcommand{\equationEntry}[2]
 {
-    \begin{tikzpicture}
-        \node [mybox] (box){%
-            \begin{minipage}{.45\textwidth}
-                #2
-            \end{minipage}
-            };
-            \node[fancytitle, right=5pt] at (box.north west) {#1};
-    \end{tikzpicture}
-    \bigskip\\
+    \begin{minipage}{.29\textwidth}
+        \vspace{.2in}
+        \nc{#1}
+        #2
+    \end{minipage}
+    \bigskip
 }
+
+

@@ -1,4 +1,14 @@
+
+
 \documentclass{article}
+\usepackage[report, landscape]{geometry}
+\geometry{
+ a4paper,
+ left=10mm,
+ right=10mm,
+ bottom=20mm,
+ top=2mm,
+ }
 \usepackage{url}
 \usepackage{multicol}
 \usepackage{amsmath}
@@ -10,6 +20,9 @@
 \usetikzlibrary{calc}
 \usetikzlibrary{decorations.pathmorphing}
 \usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\graphicspath{ {./src/img/} }
+
 \usepackage{colortbl}
 \usepackage{xcolor}
 \usepackage{mathtools}
@@ -22,22 +35,29 @@
 \newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
 \makeatother
 
-\setlength{\columnsep}{10pt}
-\usepackage[latvian]{babel}
+\title{física eléctrica}
+\usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
-\advance\topmargin-1.25in
-\advance\textheight3in
-\advance\textwidth3in
-\advance\oddsidemargin-1.5in
-\advance\evensidemargin-1.5in.
 \parindent0pt
 \parskip2pt
 \newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+%\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
+\newcommand{\nc}[2][]{%
+\tikz \draw [draw=black, ultra thick, #1]
+    ($(current page.center)-(0.5\linewidth,0)$) -- 
+    ($(current page.center)+(0.5\linewidth,0)$)
+    node [midway, fill=white] {#2};
+}%
+\begin{document}
+
+\tikzstyle{mybox} = [draw=black, fill=white, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+\tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
 
 \input{./src/utils/index.tex}
 
 \tikzstyle{mybox} = [draw=black, fill=white, very thick,
-rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+rounded corners, inner ysep=10pt, inner xsep=10pt]
 \tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
 
 \begin{document}
@@ -45,7 +65,7 @@ rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
 \begin{center}{\huge{\textbf{}}}\\
 \end{center}
 \begin{center}
-    \begin{multicols}{2}
+    \begin{multicols}{3}
         \input{./src/topics/index.tex}
     \end{multicols}
 \end{center}
