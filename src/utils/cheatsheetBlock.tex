@@ -1,0 +1,36 @@
+\newcommand{\nc}[2][]
+{\tikz \draw [draw=black, ultra thick, #1]
+($(current page.center)-(0.5\linewidth,0)$) -- 
+($(current page.center)+(0.5\linewidth,0)$)
+node [midway, fill=white] {#2};}
+
+%---------------------------------
+% \begin{tikzpicture}
+% \node [mybox] (box){%
+%     \begin{minipage}{0.33\textwidth}
+% 	\nc{Biot-Savart}
+% 	$d\vec{B}=\frac{\mu_o}{4\pi}\frac{Id\vec{l}\times\vec{r}}{r^3}$\\
+% 	$B=\frac{\mu_oI}{4\pi R^2}\Delta l_{arco}$\\
+% 	$B=\frac{\mu_oI}{4\pi R}(cos\theta_1-cos\theta_2)$\\
+% 	\nc{Cargas en Movimiento}\\
+% 	$r=\frac{mv}{qB}$\\
+% 	$a=\frac{qvB}{m}=\frac{v^2}{r}$
+% 	\end{minipage}
+% };
+%---------------------------------
+% \node[fancytitle, right=10pt] at (box.north west) {Cargas en Movimiento con Presencia de Campos};
+% \end{tikzpicture}
+% \bigskip\\
+
+\newcommand{\cheatsheetBlock}[2]
+{
+    \begin{tikzpicture}
+        \node [mybox] (box){%
+            \begin{minipage}{.45\textwidth}
+                #2
+            \end{minipage}
+            };
+            \node[fancytitle, right=5pt] at (box.north west) {#1};
+    \end{tikzpicture}
+    \bigskip\\
+}
