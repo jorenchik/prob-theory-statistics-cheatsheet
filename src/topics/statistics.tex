@@ -2,17 +2,18 @@
 
 \equationEntry{Vidējais aritmētiskais:}
 {\begin{align*}
-     \overline{x} &= \frac{\sum{i=1}{n}x_i}{0} \\
+     AVERAGE(Arr) = \overline{x} &= \frac{\sum{i=1}{n}x_i}{0} \\
 \end{align*}}
 
 \equationEntry{Mediānas pozīcija:}
 {\begin{align*}
-    \frac{n+1}{2}
+    MEDIAN(Arr) = \frac{n+1}{2}
 \end{align*}}
 
 \equationEntry{Ģeometriskais vidējais:}
 {\begin{align*}
-    \sqrt[n]{x_1*x_2*\dots*x_n}
+    \overline{x} &= \sqrt[n]{x_1*x_2*\dots*x_n} \\
+    \overline{x} &= GEOMEAN(number1, [number2], ...)
 \end{align*}}
 
 \equationEntry{Amplitūda (rangs):}
@@ -22,13 +23,13 @@
 
 \equationEntry{Dispersija (variance) izlasei:}
 {\begin{align*}
-    s^2 &= VARIANCE.S(X) \\
+    s^2 &= VAR.S(X) \\
     s^2 &= \frac{\sum_{i=0}^{n} (x_i-\overline{x})^2}{n-1}
 \end{align*}}
 
 \equationEntry{Dispersija (variance) ģenerālkopai:}
 {\begin{align*}
-    \sigma^2 &= VARIANCE.P(X) \\
+    \sigma^2 &= VAR.P(X) \\
     \sigma^2 &= \frac{\sum_{i=0}^{n} (x_i-\overline{x})^2}{N}
 \end{align*}}
 
@@ -94,9 +95,20 @@
     \includegraphics[width=1\textwidth]{BoxPlot}
 }
 
-\equationEntry{Kovariācijas koeficients}
+\equationEntry{Kovariācija}
 {
     \begin{align*}
-        cov(X,Y) = \frac{\sum_{i=0}^{n} (X_i-\overline{X})(Y_i-\overline{Y_i})}{n-1}
+        cov_s(X,Y) &= \frac{\sum_{i=0}^{n} (X_i-\overline{X})(Y_i-\overline{Y_i})}{n-1}' \\
+        cov_p(X,Y) &= \frac{\sum_{i=0}^{n} (X_i-\overline{X})(Y_i-\overline{Y_i})}{n}' \\
+        cov_s(X,Y) &= COVARIANCE.S(array1, array2) \\
+        cov_p(X,Y) &= COVARIANCE.P(array1, array2)
+    \end{align*}
+}
+
+\equationEntry{Kovariācijas koeficients (r; Pearson's)}
+{
+    \begin{align*}
+        cov_s(X,Y) &= \frac{\sum_{i=0}^{n} (X_i-\overline{X})(Y_i-\overline{Y_i})}{n-1}' \\
+        r = \displaystyle\frac{COV(x,y)}{\sigma_x \sigma_y} &= CORREL(array1, array2)
     \end{align*}
 }
