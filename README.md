@@ -1,3 +1,7 @@
+# Current version
+
+PDF can be found [HERE](https://github.com/jorenchik/prob-theory-statistics-cheatsheet/blob/main/MidtermCheatsheet.pdf).
+
 # Compilation
 
 ```
